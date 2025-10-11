@@ -1,0 +1,23 @@
+.weather-data {
+  text-align: center;
+}
+
+.weather-data__city {
+  font-size: var(--size-4xl);
+}
+
+.weather-data__temp {
+  font-size: var(--size-9xl);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+.weather-data__summary {
+  font-size: var(--size-2xl);
+  line-height: 0.9;
+}
+
+.weather-data__highlowtemp {
+  font-size: var(--size-2xl);
+  line-height: 0.95;
+}

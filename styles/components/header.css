@@ -1,0 +1,14 @@
+header {
+  background-color: var(--color-nav-bg);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-bottom: 1rem;
+}
