@@ -22,3 +22,13 @@ searchBtn.addEventListener("click", () => {
     getCurrentWeatherInfo(currentUrl, apiKey, city, unit.value);
   }
 });
+
+unit.addEventListener("change", (event) => {
+  const city = searchInput.value.trim();
+
+  if (!city) {
+    searchInput.placeholder = "Please enter a city name";
+  } else {
+    getCurrentWeatherInfo(currentUrl, apiKey, city, event.target.value);
+  }
+});

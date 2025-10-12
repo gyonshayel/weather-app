@@ -2,7 +2,6 @@ import { renderCurrentWeatherData } from "../scripts/renderCurrentWeatherData";
 
 export async function getCurrentWeatherInfo(url, apiKey, query, unit) {
   const apiCall = `${url}?q=${query}&key=${apiKey}`;
-
   let weatherData = "";
 
   try {
