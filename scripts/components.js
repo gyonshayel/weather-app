@@ -8,14 +8,12 @@ class ComponentCard extends HTMLElement {
     const data3 = this.getAttribute("data3");
 
     this.innerHTML = `
-      <section class="${selector}">
-        <div class="component">
-          <h3 class="component-title">${title}</h3>
-          <p class="component-data1">${data1}</p>
-          <p class="component-data2">${data2}</p>
-          <p class="component-data3">${data3}</p>
-        </div>
-      </section>
+      <div class="${selector} component">
+        <h3 class="component-title">${title}</h3>
+        <p class="component-data1">${data1}</p>
+        <p class="component-data2">${data2}</p>
+        <p class="component-data3">${data3}</p>
+      </div>
     `;
   }
 }

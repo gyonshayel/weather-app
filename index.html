@@ -26,27 +26,36 @@
         <button id="search-btn" class="header-content__btn btn" type="submit">
           Search
         </button>
+        <select name="unit" id="unit" aria-label="Unit">
+          <option value="c" selected>°C</option>
+          <option value="f">°F</option>
+        </select>
       </div>
     </header>
     <main id="weather-app">
       <section class="weather-data container"></section>
-      <component-card
-        selector="feels-like"
-        title="Feels Like"
-        data1="38°"
-        data2=""
-        data3="It feels hotter than the actual temperature."
-      ></component-card>
-      <component-card
-        selector="uv-index"
-        title="Uv Index"
-        data1="4"
-        data2="Moderate"
-        data3="Use sun protection until 4PM."
-      ></component-card>
-      <script src="/src/components.js"></script>
+
+      <section class="weather-data__components">
+        <component-card
+          selector="feels-like"
+          title="Feels Like"
+          data1="38°"
+          data2=""
+          data3="It feels hotter than the actual temperature."
+        ></component-card>
+
+        <component-card
+          selector="uv-index"
+          title="Uv Index"
+          data1="4"
+          data2="Moderate"
+          data3="Use sun protection until 4PM."
+        ></component-card>
+      </section>
+
+      <script src="/scripts/components.js"></script>
     </main>
     <footer></footer>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
   </body>
 </html>
