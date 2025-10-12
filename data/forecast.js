@@ -13,10 +13,9 @@ export async function getHourlyForecastInfo(url, apiKey, query, unit) {
       forecastData = await response.json();
       console.log(forecastData); // Remove later
 
-      renderHourlyForecastData(forecastData.forecast.forecastday[0], unit);
+      renderHourlyForecastData(forecastData.forecast.forecastday, unit);
     }
   } catch (error) {
     alert(`Error fetching forecast data: ${error.message}`);
-    console.log(error.message);
   }
 }

@@ -1,20 +1,31 @@
 import { formatTime } from "./utils/formatTime";
 
-export function renderHourlyForecastData(arrToday, unit) {
-  const currentHour = new Date().getHours();
+export function renderHourlyForecastData(arrDays, unit) {
   const hourlyForecastContainer = document.querySelector(
     ".hourly-forecast__data"
   );
   let hourlyForecastHTML = "";
 
-  const upcomingHours = arrToday.hour.filter((h) => {
-    const hour = new Date(h.time).getHours();
-    return hour >= currentHour;
+  const currentDate = new Date();
+  const currentHour = currentDate.getHours();
+
+  // today's hours and tomorrow's hours data
+  const todayHours = arrDays[0].hour;
+  const tomorrowHours = arrDays[1]?.hour || [];
+
+  // combining both
+  const allHours = [...todayHours, ...tomorrowHours];
+
+  // getting only the next 24 hours from NOW
+  const next24Hours = allHours.filter((h) => {
+    const hour = new Date(h.time);
+    return (
+      hour > currentDate &&
+      hour <= new Date(currentDate.getTime() + 1000 * 60 * 60 * 24)
+    );
   });
 
-  console.log(upcomingHours);
-
-  upcomingHours.forEach((hour) => {
+  next24Hours.forEach((hour) => {
     hourlyForecastHTML += `
       <div>
         <p>${formatTime(hour.time)}</p>
