@@ -33,7 +33,14 @@
       </div>
     </header>
     <main id="weather-app">
-      <section class="weather-data container"></section>
+      <section class="current-weather-data container"></section>
+
+      <section class="hourly-forecast container">
+        <h3 class="hourly-forecast__title">Hourly Forecast</h3>
+        <div class="hourly-forecast__data"></div>
+      </section>
+
+      <section class="future-forecast container"></section>
 
       <section class="weather-data__components">
         <component-card
@@ -52,7 +59,6 @@
           data3="Use sun protection until 4PM."
         ></component-card>
       </section>
-
       <script src="/scripts/components.js"></script>
     </main>
     <footer></footer>

@@ -1,13 +1,15 @@
 export function renderCurrentWeatherData(name, temp, condition, hTemp, lTemp) {
-  const weatherDataContainer = document.querySelector(".weather-data");
-  let weatherDataHTML = "";
+  const currentWeatherDataContainer = document.querySelector(
+    ".current-weather-data"
+  );
+  let currentWeatherDataHTML = "";
 
-  weatherDataHTML = `
-        <h1 class="weather-data__city">${name}</h1>
-        <h2 class="weather-data__temp">&nbsp;${temp}°</h2>
-        <p class="weather-data__summary">${condition}</p>
-        <p class="weather-data__highest-lowest-temp">H:${hTemp}° L:${lTemp}°</p>
-      `;
+  currentWeatherDataHTML = `
+    <h1 class="current-weather-data__city">${name}</h1>
+    <h2 class="current-weather-data__temp">&nbsp;${temp}°</h2>
+    <p class="current-weather-data__summary">${condition}</p>
+    <p class="current-weather-data__highest-lowest-temp">H:${hTemp}° L:${lTemp}°</p>
+  `;
 
-  weatherDataContainer.innerHTML = weatherDataHTML;
+  currentWeatherDataContainer.innerHTML = currentWeatherDataHTML;
 }

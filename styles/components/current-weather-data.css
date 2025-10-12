@@ -1,0 +1,27 @@
+.current-weather-data {
+  text-align: center;
+}
+
+.current-weather-data__city {
+  font-size: var(--size-3xl);
+  color: var(--color-heading);
+}
+
+.current-weather-data__temp {
+  font-size: var(--size-8xl);
+  color: var(--color-heading);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+.current-weather-data__summary {
+  font-size: var(--size-xl);
+  color: var(--color-text);
+  line-height: 0.9;
+}
+
+.current-weather-data__highest-lowest-temp {
+  font-size: var(--size-xl);
+  color: var(--color-text);
+  line-height: 0.95;
+}
