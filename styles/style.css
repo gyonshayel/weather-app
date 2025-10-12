@@ -59,7 +59,8 @@ html {
 
 body {
   font-family: var(--font-family-text);
-  background-color: var(--color-middle);
+  /* background-color: var(--color-middle); */
+  background-color: cornflowerblue;
 }
 
 img,

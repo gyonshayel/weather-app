@@ -30,9 +30,21 @@
     </header>
     <main id="weather-app">
       <section class="weather-data container"></section>
-      <section class="empty container section"></section>
-      <section class="empty container section"></section>
-      <section class="empty container section"></section>
+      <component-card
+        selector="feels-like"
+        title="Feels Like"
+        data1="38°"
+        data2=""
+        data3="It feels hotter than the actual temperature."
+      ></component-card>
+      <component-card
+        selector="uv-index"
+        title="Uv Index"
+        data1="4"
+        data2="Moderate"
+        data3="Use sun protection until 4PM."
+      ></component-card>
+      <script src="/src/components.js"></script>
     </main>
     <footer></footer>
     <script type="module" src="/src/main.js"></script>

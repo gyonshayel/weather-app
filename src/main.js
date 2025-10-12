@@ -2,6 +2,7 @@ import "../styles/modern-normalize.css";
 import "../styles/style.css";
 import "../styles/components/header.css";
 import "../styles/components/weather-data.css";
+import "../styles/components/components.css";
 import "../styles/utils.css";
 
 const searchBtn = document.getElementById("search-btn");
