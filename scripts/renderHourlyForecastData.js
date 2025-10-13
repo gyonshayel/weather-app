@@ -25,12 +25,12 @@ export function renderHourlyForecastData(arrDays, unit) {
     );
   });
 
-  next24Hours.forEach((hour) => {
+  next24Hours.forEach(({ time, temp_c, temp_f }) => {
     hourlyForecastHTML += `
       <div class="hourly-forecast__data-item">
-        <p class="hourly-forecast__data-item__time">${formatTime(hour.time)}</p>
+        <p class="hourly-forecast__data-item__time">${formatTime(time)}</p>
         <p class="hourly-forecast__data-item__temp">${
-          unit === "c" ? hour.temp_c : hour.temp_f
+          unit === "c" ? temp_c : temp_f
         }°</p>
       </div>
     `;

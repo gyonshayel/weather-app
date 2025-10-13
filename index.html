@@ -9,46 +9,61 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <meta
+      name="description"
+      content="A simple weather app that shows current, hourly, and 7-day forecasts using WeatherAPI.com."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   </head>
   <body>
     <header>
       <div class="header-content container">
-        <input
-          class="header-content__input"
-          type="text"
-          id="search"
-          name="search"
-          aria-label="search"
-          placeholder="Search for a city"
-        />
-        <button id="search-btn" class="header-content__btn btn" type="submit">
-          Search
-        </button>
-        <select name="unit" id="unit" aria-label="Unit">
-          <option value="c" selected>°C</option>
-          <option value="f">°F</option>
-        </select>
+        <form class="header-content__form" role="search">
+          <input
+            class="header-content__input"
+            type="text"
+            id="search"
+            name="search"
+            aria-label="search"
+            placeholder="Search for a city"
+          />
+          <button id="search-btn" class="header-content__btn btn" type="submit">
+            Search
+          </button>
+          <select name="unit" id="unit" aria-label="Temperature Unit">
+            <option value="c" selected>°C</option>
+            <option value="f">°F</option>
+          </select>
+        </form>
       </div>
     </header>
     <main id="weather-app">
-      <section class="current-weather-data container"></section>
+      <section class="current-weather container">
+        <div class="current-weather-data" aria-live="polite"></div>
+      </section>
 
       <section class="hourly-forecast container">
-        <h3 class="hourly-forecast__title">Hourly Forecast</h3>
-        <div class="hourly-forecast__data"></div>
+        <h2 class="hourly-forecast__title">Hourly Forecast</h2>
+        <div class="hourly-forecast__data" role="list"></div>
       </section>
 
       <section class="future-forecast container">
-        <h3 class="future-forecast__title">7-Day Forecast</h3>
-        <div class="future-forecast__data"></div>
+        <h2 class="future-forecast__title">7-Day Forecast</h2>
+        <div class="future-forecast__data" role="list"></div>
       </section>
 
       <section class="weather-data__components container"></section>
       <script src="/scripts/components.js"></script>
     </main>
-    <footer></footer>
+    <footer class="footer container">
+      <p>
+        Powered by
+        <a href="https://www.weatherapi.com/" title="Free Weather API"
+          >WeatherAPI.com</a
+        >
+      </p>
+    </footer>
     <script type="module" src="/scripts/main.js"></script>
   </body>
 </html>

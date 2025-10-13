@@ -3,3 +3,4 @@ feelslike
 forecastday
 maxtemp
 mintemp
+weatherapi

@@ -3,11 +3,10 @@ export function renderComponent(selector, title, data) {
     ".weather-data__components"
   );
 
-  componentsContainer.innerHTML += `
-    <component-card
-          selector="${selector}"
-          title="${title}"
-          data1="${data}"
-    ></component-card>
-  `;
+  const componentElement = document.createElement("component-card");
+  componentElement.setAttribute("selector", selector);
+  componentElement.setAttribute("title", title);
+  componentElement.setAttribute("data", data);
+
+  componentsContainer.appendChild(componentElement);
 }
