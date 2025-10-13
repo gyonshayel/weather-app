@@ -1,4 +1,5 @@
 # Custom Dictionary Words
+feelslike
 forecastday
 maxtemp
 mintemp

@@ -5,6 +5,7 @@ import "../styles/style.css";
 import "../styles/components/header.css";
 import "../styles/components/current-weather-data.css";
 import "../styles/components/hourly-forecast.css";
+import "../styles/components/future-forecast.css";
 import "../styles/components/components.css";
 import "../styles/utils.css";
 
