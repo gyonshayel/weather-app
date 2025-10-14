@@ -1,8 +1,8 @@
 import { renderCurrentWeatherData } from "../scripts/renderCurrentWeatherData";
 import { renderHourlyForecastData } from "../scripts/renderHourlyForecastData";
 import { renderFutureForecastData } from "../scripts/renderFutureForecastData";
-import { renderComponent } from "../scripts/renderComponent";
-import { formatTemp } from "../scripts/utils/formatTemp";
+import { uvIndex } from "../scripts/uvIndex";
+import { feelsLike } from "../scripts/feelsLike";
 
 export async function getWeatherInfo(url, apiKey, query, unit) {
   const apiCall = `${url}?q=${query}&days=7&alerts=alerts%3Dno&aqi=aqi%3Dno&key=${apiKey}`;
@@ -27,14 +27,6 @@ function renderWeather(weatherData, unit) {
   renderHourlyForecastData(forecast.forecastday, unit);
   renderFutureForecastData(forecast.forecastday, unit);
 
-  renderComponent("uv-index", "UV-Index", current.uv);
-  renderComponent(
-    "feels-like",
-    "Feels Like",
-    `${formatTemp(
-      weatherData.current.feelslike_c,
-      weatherData.current.feelslike_f,
-      unit
-    )}`
-  );
+  uvIndex(current.uv);
+  feelsLike(current, unit);
 }

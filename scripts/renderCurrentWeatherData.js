@@ -31,5 +31,5 @@ export function renderCurrentWeatherData(
   currentWeatherDataCity.textContent = name;
   currentWeatherDataTemp.textContent = `${temp}`;
   currentWeatherDataSummary.textContent = condition.text;
-  currentWeatherDataHighestLowestTemp.textContent = `H:${hTemp} L:${lTemp}`;
+  currentWeatherDataHighestLowestTemp.textContent = `H:${hTemp}\u00A0\u00A0L:${lTemp}`;
 }
