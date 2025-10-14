@@ -47,8 +47,8 @@ const handleUnitChange = (event) => {
 searchBtn.addEventListener("click", handleSearch);
 unit.addEventListener("change", handleUnitChange);
 
-const savedCity = localStorage.getItem("lastCity");
-if (savedCity) {
-  searchInput.value = savedCity;
-  getWeatherInfo(url, apiKey, savedCity, unit.value);
-}
+// const savedCity = localStorage.getItem("lastCity");
+// if (savedCity) {
+//   searchInput.value = savedCity;
+//   getWeatherInfo(url, apiKey, savedCity, unit.value);
+// }

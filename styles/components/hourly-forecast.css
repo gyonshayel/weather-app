@@ -1,3 +1,7 @@
+.hourly-forecast__title {
+  display: none;
+}
+
 .hourly-forecast__data {
   display: flex;
   justify-content: space-between;

@@ -1,3 +1,7 @@
+.future-forecast__title {
+  display: none;
+}
+
 .future-forecast__data-item {
   display: flex;
   justify-content: space-between;

@@ -1,6 +1,8 @@
 import { formatTime } from "./utils/formatTime";
+import { formatTemp } from "./utils/formatTemp";
 
 export function renderHourlyForecastData(arrDays, unit) {
+  document.querySelector(".hourly-forecast__title").style.display = "block";
   const hourlyForecastContainer = document.querySelector(
     ".hourly-forecast__data"
   );
@@ -17,11 +19,11 @@ export function renderHourlyForecastData(arrDays, unit) {
   const allHours = [...todayHours, ...tomorrowHours];
 
   // getting only the next 24 hours from NOW
+  const cutOff = new Date(currentDate.getTime() + 1000 * 60 * 60 * 24);
   const next24Hours = allHours.filter((h) => {
     const hour = new Date(h.time);
     return (
-      hour > currentDate &&
-      hour <= new Date(currentDate.getTime() + 1000 * 60 * 60 * 24)
+      hour.getHours() == currentHour || (hour > currentDate && hour <= cutOff)
     );
   });
 
@@ -29,9 +31,11 @@ export function renderHourlyForecastData(arrDays, unit) {
     hourlyForecastHTML += `
       <div class="hourly-forecast__data-item">
         <p class="hourly-forecast__data-item__time">${formatTime(time)}</p>
-        <p class="hourly-forecast__data-item__temp">${
-          unit === "c" ? temp_c : temp_f
-        }°</p>
+        <p class="hourly-forecast__data-item__temp">${formatTemp(
+          temp_c,
+          temp_f,
+          unit
+        )}</p>
       </div>
     `;
   });

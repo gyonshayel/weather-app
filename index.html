@@ -20,6 +20,7 @@
     <header>
       <div class="header-content container">
         <form class="header-content__form" role="search">
+          <label for="search" class="visually-hidden">Search</label>
           <input
             class="header-content__input"
             type="text"
@@ -27,10 +28,14 @@
             name="search"
             aria-label="search"
             placeholder="Search for a city"
+            required
           />
+
           <button id="search-btn" class="header-content__btn btn" type="submit">
             Search
           </button>
+
+          <label for="unit" class="visually-hidden"></label>
           <select name="unit" id="unit" aria-label="Temperature Unit">
             <option value="c" selected>°C</option>
             <option value="f">°F</option>
@@ -40,7 +45,12 @@
     </header>
     <main id="weather-app">
       <section class="current-weather container">
-        <div class="current-weather-data" aria-live="polite"></div>
+        <div class="current-weather-data" aria-live="polite">
+          <h1 class="current-weather-data__city"></h1>
+          <h2 class="current-weather-data__temp"></h2>
+          <p class="current-weather-data__summary"></p>
+          <p class="current-weather-data__highest-lowest-temp"></p>
+        </div>
       </section>
 
       <section class="hourly-forecast container">

@@ -2,6 +2,7 @@ import { renderCurrentWeatherData } from "../scripts/renderCurrentWeatherData";
 import { renderHourlyForecastData } from "../scripts/renderHourlyForecastData";
 import { renderFutureForecastData } from "../scripts/renderFutureForecastData";
 import { renderComponent } from "../scripts/renderComponent";
+import { formatTemp } from "../scripts/utils/formatTemp";
 
 export async function getWeatherInfo(url, apiKey, query, unit) {
   const apiCall = `${url}?q=${query}&days=7&alerts=alerts%3Dno&aqi=aqi%3Dno&key=${apiKey}`;
@@ -30,10 +31,10 @@ function renderWeather(weatherData, unit) {
   renderComponent(
     "feels-like",
     "Feels Like",
-    `${
-      unit === "c"
-        ? weatherData.current.feelslike_c
-        : weatherData.current.feelslike_f
-    }°`
+    `${formatTemp(
+      weatherData.current.feelslike_c,
+      weatherData.current.feelslike_f,
+      unit
+    )}`
   );
 }
