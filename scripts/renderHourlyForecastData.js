@@ -27,10 +27,13 @@ export function renderHourlyForecastData(arrDays, unit) {
     );
   });
 
-  next24Hours.forEach(({ time, temp_c, temp_f }) => {
+  next24Hours.forEach(({ time, temp_c, temp_f, condition }) => {
     hourlyForecastHTML += `
       <div class="hourly-forecast__data-item">
         <p class="hourly-forecast__data-item__time">${formatTime(time)}</p>
+        <img class="hourly-forecast__data-item__icon" src="${
+          condition.icon
+        }" alt="${condition.text}" />
         <p class="hourly-forecast__data-item__temp">${formatTemp(
           temp_c,
           temp_f,
