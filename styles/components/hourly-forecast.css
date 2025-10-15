@@ -1,3 +1,8 @@
+.hourly-forecast {
+  background-color: var(--color-top);
+  border-radius: 15px;
+}
+
 .hourly-forecast__title {
   display: none;
   margin-bottom: 1rem;
@@ -7,10 +12,10 @@
 
 .hourly-forecast__data {
   display: flex;
+  column-gap: 1rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
-  column-gap: 1rem;
 }
 
 .hourly-forecast__data::-webkit-scrollbar {
@@ -20,10 +25,10 @@
 .hourly-forecast__data-item {
   flex: 0 0 auto;
   min-width: 50px;
-  text-align: center;
   font-family: var(--font-family-text);
-  color: var(--color-text);
   font-weight: 500;
+  color: var(--color-text);
+  text-align: center;
 }
 
 .hourly-forecast__data-item__icon {
@@ -32,6 +37,9 @@
   margin-bottom: 0.25em;
   background-color: transparent;
 }
+
+/* xs */
+/* @media (min-width: 475px) {} */
 
 /* sm */
 @media (min-width: 640px) {
@@ -43,10 +51,10 @@
 
   .scroll-btn {
     position: absolute;
-    cursor: pointer;
-    border-radius: 50%;
     overflow: hidden;
+    border-radius: 50%;
     backdrop-filter: blur(4px);
+    cursor: pointer;
     z-index: 10;
   }
 

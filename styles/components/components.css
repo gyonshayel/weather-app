@@ -1,4 +1,4 @@
-#components {
+#weather-data__components {
   padding-left: 0;
   padding-right: 0;
 }
@@ -9,29 +9,29 @@
   gap: 1rem;
 }
 
+component-card {
+  flex: 1;
+  padding: 0.5em;
+  background-color: var(--color-top);
+  border-radius: 15px;
+}
+
 .component {
   max-height: max-content;
   max-width: max-content;
 }
 
-component-card {
-  flex: 1;
-  padding: 0.5em;
-  border: 1px solid black;
-  border-radius: 15px;
-}
-
 .component-title {
   font-family: var(--font-family-heading);
-  font-weight: 600;
   font-size: var(--size-base);
+  font-weight: 600;
   color: var(--color-heading);
 }
 
 .component-data0 {
   font-family: var(--font-family-text);
-  font-weight: 500;
   font-size: var(--size-4xl);
+  font-weight: 500;
   color: var(--color-heading);
 }
 
@@ -46,6 +46,12 @@ component-card {
 .component-data2 {
   font-family: var(--font-family-text);
   font-size: var(--size-sm);
-  line-height: 0.95;
   color: var(--color-text);
+  line-height: 0.95;
 }
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */

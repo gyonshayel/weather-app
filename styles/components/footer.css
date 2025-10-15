@@ -1,7 +1,7 @@
 #footer-note {
   text-align: center;
+  color: var(--color-heading);
   padding-bottom: 0.5rem;
-  color: var(--color-header);
 }
 
 /* xs */

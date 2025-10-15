@@ -36,20 +36,4 @@
 /* @media (min-width: 475px) {} */
 
 /* sm */
-@media (min-width: 640px) {
-  .current-weather-data__city {
-    font-size: var(--size-4xl);
-  }
-
-  .current-weather-data__temp {
-    font-size: var(--size-9xl);
-  }
-
-  .current-weather-data__summary {
-    font-size: var(--size-2xl);
-  }
-
-  .current-weather-data__highest-lowest-temp {
-    font-size: var(--size-2xl);
-  }
-}
+/* @media (min-width: 640px) {} */
