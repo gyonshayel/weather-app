@@ -125,8 +125,10 @@ button {
     --color-link: rgb(41, 151, 255);
   }
 
-  #weather-app {
-    box-shadow: 0px 4px 4px oklch(100% 0.00011 271.152 / 0.2),
-      0px 6px 6px oklch(100% 0.00011 271.152 / 0.1);
+  @media (min-width: 640px) {
+    #weather-app {
+      box-shadow: 0px 4px 4px oklch(100% 0.00011 271.152 / 0.2),
+        0px 6px 6px oklch(100% 0.00011 271.152 / 0.1);
+    }
   }
 }
