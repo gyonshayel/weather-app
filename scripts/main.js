@@ -45,11 +45,24 @@ const handleUnitChange = (event) => {
   getWeatherInfo(url, apiKey, city, event.target.value);
 };
 
+// Handle scroll
+const hourlyForecastData = document.querySelector(".hourly-forecast__data");
+const btnLeft = document.querySelector(".scroll-btn.left");
+const btnRight = document.querySelector(".scroll-btn.right");
+
+btnLeft.addEventListener("click", () => {
+  hourlyForecastData.scrollBy({ left: -150, behavior: "smooth" });
+});
+
+btnRight.addEventListener("click", () => {
+  hourlyForecastData.scrollBy({ left: 150, behavior: "smooth" });
+});
+
 searchBtn.addEventListener("click", handleSearch);
 unit.addEventListener("change", handleUnitChange);
 
-// const savedCity = localStorage.getItem("lastCity");
-// if (savedCity) {
-//   searchInput.value = savedCity;
-//   getWeatherInfo(url, apiKey, savedCity, unit.value);
-// }
+const savedCity = localStorage.getItem("lastCity");
+if (savedCity) {
+  searchInput.value = savedCity;
+  getWeatherInfo(url, apiKey, savedCity, unit.value);
+}

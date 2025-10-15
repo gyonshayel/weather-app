@@ -7,10 +7,14 @@
 
 .hourly-forecast__data {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
   overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
   column-gap: 1rem;
+}
+
+.hourly-forecast__data::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .hourly-forecast__data-item {
@@ -27,4 +31,35 @@
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   background-color: transparent;
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .hourly-forecast__data-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .scroll-btn {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+  }
+
+  .scroll-btn.left {
+    left: -20px;
+  }
+
+  .scroll-btn.right {
+    right: -20px;
+  }
+
+  .scroll-btn svg {
+    height: 25px;
+    width: 25px;
+  }
 }
