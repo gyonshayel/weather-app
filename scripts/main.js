@@ -10,7 +10,7 @@ import "../styles/components/hourly-forecast.css";
 import "../styles/utils.css";
 
 const url = "https://api.weatherapi.com/v1/forecast.json";
-const apiKey = "34f5a79bf8334a03ab9122836251210";
+const apiKey = "a2f2502d1a824f03b11191244251510";
 
 const searchInput = document.getElementById("search");
 const unit = document.getElementById("unit");
