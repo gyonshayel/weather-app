@@ -29,7 +29,7 @@ export function renderCurrentWeatherData(
   const lTemp = formatTemp(mintemp_c, mintemp_f, unit);
 
   currentWeatherDataCity.textContent = name;
-  currentWeatherDataTemp.textContent = `${temp}`;
+  currentWeatherDataTemp.textContent = `\u00A0${temp}`;
   currentWeatherDataSummary.textContent = condition.text;
   currentWeatherDataHighestLowestTemp.textContent = `H:${hTemp}\u00A0\u00A0L:${lTemp}`;
 }

@@ -1,0 +1,25 @@
+#footer-note {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  color: var(--color-header);
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+@media (min-width: 640px) {
+  .footer {
+    margin-top: auto;
+  }
+
+  #footer-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-link);
+  }
+
+  #footer-link:hover {
+    text-decoration: underline;
+  }
+}

@@ -4,24 +4,53 @@
 
 .current-weather-data__city {
   font-size: var(--size-3xl);
+  font-family: var(--font-family-heading);
   color: var(--color-heading);
+  line-height: 0.9;
 }
 
 .current-weather-data__temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: var(--size-8xl);
+  font-family: var(--font-family-heading);
   color: var(--color-heading);
   letter-spacing: -0.05em;
-  line-height: 0.9;
 }
 
 .current-weather-data__summary {
   font-size: var(--size-xl);
+  font-family: var(--font-family-heading);
   color: var(--color-text);
   line-height: 0.9;
 }
 
 .current-weather-data__highest-lowest-temp {
   font-size: var(--size-xl);
+  font-family: var(--font-family-heading);
   color: var(--color-text);
   line-height: 0.95;
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+@media (min-width: 640px) {
+  .current-weather-data__city {
+    font-size: var(--size-4xl);
+  }
+
+  .current-weather-data__temp {
+    font-size: var(--size-9xl);
+  }
+
+  .current-weather-data__summary {
+    font-size: var(--size-2xl);
+  }
+
+  .current-weather-data__highest-lowest-temp {
+    font-size: var(--size-2xl);
+  }
 }

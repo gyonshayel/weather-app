@@ -17,59 +17,84 @@
     <title>Weather App</title>
   </head>
   <body>
-    <header>
-      <div class="header-content container">
-        <form class="header-content__form" role="search">
-          <label for="search" class="visually-hidden">Search</label>
-          <input
-            class="header-content__input"
-            type="text"
-            id="search"
-            name="search"
-            aria-label="search"
-            placeholder="Search for a city"
-            required
-          />
+    <div id="weather-app">
+      <header>
+        <div class="header-content container header-footer">
+          <form class="header-content__form" role="search">
+            <label for="search" class="visually-hidden">Search</label>
+            <input
+              class="header-content__input"
+              type="text"
+              id="search"
+              name="search"
+              aria-label="search"
+              placeholder="Search for a city"
+              required
+              autofocus
+            />
 
-          <button id="search-btn" class="header-content__btn btn" type="submit">
-            Search
-          </button>
+            <label for="unit" class="visually-hidden"></label>
+            <select name="unit" id="unit" aria-label="Temperature Unit">
+              <option value="c" selected>°C</option>
+              <option value="f">°F</option>
+            </select>
 
-          <label for="unit" class="visually-hidden"></label>
-          <select name="unit" id="unit" aria-label="Temperature Unit">
-            <option value="c" selected>°C</option>
-            <option value="f">°F</option>
-          </select>
-        </form>
-      </div>
-    </header>
-    <main id="weather-app">
-      <section class="current-weather container">
-        <div class="current-weather-data" aria-live="polite">
-          <h1 class="current-weather-data__city"></h1>
-          <h2 class="current-weather-data__temp"></h2>
-          <p class="current-weather-data__summary"></p>
-          <p class="current-weather-data__highest-lowest-temp"></p>
+            <button
+              id="search-btn"
+              class="header-content__btn btn"
+              type="submit"
+            >
+              <svg
+                id="search-btn__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
-      </section>
+      </header>
+      <main>
+        <section class="current-weather container section">
+          <div class="current-weather-data" aria-live="polite">
+            <h1 class="current-weather-data__city">City</h1>
+            <h2 class="current-weather-data__temp">_ _</h2>
+            <p class="current-weather-data__summary"></p>
+            <p class="current-weather-data__highest-lowest-temp"></p>
+          </div>
+        </section>
 
-      <section class="hourly-forecast container">
-        <h2 class="hourly-forecast__title">Hourly Forecast</h2>
-        <div class="hourly-forecast__data" role="list"></div>
-      </section>
+        <section class="hourly-forecast container section">
+          <h2 class="hourly-forecast__title">Hourly Forecast</h2>
+          <div class="hourly-forecast__data" role="list"></div>
+        </section>
 
-      <section class="future-forecast container">
-        <h2 class="future-forecast__title">7-Day Forecast</h2>
-        <div class="future-forecast__data" role="list"></div>
-      </section>
+        <section class="future-forecast container section">
+          <h2 class="future-forecast__title">7-Day Forecast</h2>
+          <div class="future-forecast__data" role="list"></div>
+        </section>
 
-      <section class="weather-data__components container"></section>
-      <script src="/scripts/components.js"></script>
-    </main>
-    <footer class="footer container">
-      <p>
+        <section
+          id="components"
+          class="weather-data__components container"
+        ></section>
+        <script src="/scripts/components.js"></script>
+      </main>
+    </div>
+    <footer class="footer header-footer">
+      <p id="footer-note">
         Powered by
-        <a href="https://www.weatherapi.com/" title="Free Weather API"
+        <a
+          id="footer-link"
+          href="https://www.weatherapi.com/"
+          title="Free Weather API"
           >WeatherAPI.com</a
         >
       </p>

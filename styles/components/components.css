@@ -1,12 +1,51 @@
+#components {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .weather-data__components {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .component {
-  height: 150px;
-  width: 150px;
-  border-radius: 15px;
+  max-height: max-content;
+  max-width: max-content;
+}
+
+component-card {
+  flex: 1;
+  padding: 0.5em;
   border: 1px solid black;
-  background-color: hsla(100, 100%, 100%, 0.4);
+  border-radius: 15px;
+}
+
+.component-title {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  font-size: var(--size-base);
+  color: var(--color-heading);
+}
+
+.component-data0 {
+  font-family: var(--font-family-text);
+  font-weight: 500;
+  font-size: var(--size-4xl);
+  color: var(--color-heading);
+}
+
+.component-data1 {
+  font-family: var(--font-family-text);
+  font-size: var(--size-xl);
+  color: var(--color-text);
+  line-height: 0.9;
+  margin-bottom: 0.5em;
+}
+
+.component-data2 {
+  font-family: var(--font-family-text);
+  font-size: var(--size-sm);
+  line-height: 0.95;
+  color: var(--color-text);
 }

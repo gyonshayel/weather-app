@@ -1,11 +1,12 @@
 import { getWeatherInfo } from "../data/weatherInfo";
 import "../styles/modern-normalize.css";
 import "../styles/style.css";
-import "../styles/components/header.css";
-import "../styles/components/current-weather.css";
-import "../styles/components/hourly-forecast.css";
-import "../styles/components/future-forecast.css";
 import "../styles/components/components.css";
+import "../styles/components/current-weather.css";
+import "../styles/components/footer.css";
+import "../styles/components/future-forecast.css";
+import "../styles/components/header.css";
+import "../styles/components/hourly-forecast.css";
 import "../styles/utils.css";
 
 const url = "https://api.weatherapi.com/v1/forecast.json";

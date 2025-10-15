@@ -1,9 +1,45 @@
 .future-forecast__title {
   display: none;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-heading);
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+.future-forecast__data {
+  font-family: var(--font-family-text);
+}
+
+.future-forecast__data hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: var(--color-text);
+}
+
+.future-forecast__data hr:last-child {
+  display: none;
 }
 
 .future-forecast__data-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.future-forecast__data-item__date {
+  flex: 1;
+  font-family: var(--font-family-heading);
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.future-forecast__data-item__icon {
+  max-width: 50px;
+  background-color: transparent;
+}
+.future-forecast__data-item__temps {
+  flex: 1;
+  text-align: right;
+  font-weight: 500;
+  color: var(--color-text);
 }

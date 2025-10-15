@@ -1,12 +1,30 @@
 .hourly-forecast__title {
   display: none;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-heading);
+  color: var(--color-heading);
 }
 
 .hourly-forecast__data {
   display: flex;
   justify-content: space-between;
-  align-items: space-around;
   flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   column-gap: 1rem;
+}
+
+.hourly-forecast__data-item {
+  flex: 0 0 auto;
+  min-width: 50px;
+  text-align: center;
+  font-family: var(--font-family-text);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.hourly-forecast__data-item__icon {
+  width: 50px;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  background-color: transparent;
 }
