@@ -1,4 +1,5 @@
 import { renderCurrentWeatherData } from "../scripts/renderCurrentWeatherData";
+import { handleScroll } from "../scripts/handleScroll";
 import { renderHourlyForecastData } from "../scripts/renderHourlyForecastData";
 import { renderFutureForecastData } from "../scripts/renderFutureForecastData";
 import { uvIndex } from "../scripts/uvIndex";
@@ -24,6 +25,7 @@ function renderWeather(weatherData, unit) {
   const today = forecast?.forecastday?.[0];
 
   renderCurrentWeatherData(location, current, today, unit);
+  handleScroll();
   renderHourlyForecastData(forecast.forecastday, unit);
   renderFutureForecastData(forecast.forecastday, unit);
 
