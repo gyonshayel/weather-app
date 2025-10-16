@@ -26,9 +26,6 @@
   border-color: var(--color-middle);
   color: var(--color-middle);
 }
-.future-forecast__data hr:last-child {
-  display: none;
-}
 
 .future-forecast__data-item {
   display: flex;

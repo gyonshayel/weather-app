@@ -6,7 +6,11 @@ export function renderHourlyForecastData(arrDays, unit) {
   const hourlyForecastContainer = document.querySelector(
     ".hourly-forecast__data"
   );
-  let hourlyForecastHTML = "";
+
+  if (!arrDays.length || !arrDays[0]?.hour) {
+    hourlyForecastContainer.innerHTML = "<p>No forecast data available.</p>";
+    return;
+  }
 
   const currentDate = new Date();
   const currentHour = currentDate.getHours();
@@ -27,21 +31,26 @@ export function renderHourlyForecastData(arrDays, unit) {
     );
   });
 
+  const fragment = document.createDocumentFragment();
+
   next24Hours.forEach(({ time, temp_c, temp_f, condition }) => {
-    hourlyForecastHTML += `
-      <div class="hourly-forecast__data-item">
-        <p class="hourly-forecast__data-item__time">${formatTime(time)}</p>
-        <img class="hourly-forecast__data-item__icon" src="${
-          condition.icon
-        }" alt="${condition.text}" />
-        <p class="hourly-forecast__data-item__temp">${formatTemp(
-          temp_c,
-          temp_f,
-          unit
-        )}</p>
-      </div>
-    `;
+    const item = document.createElement("div");
+    item.className = "hourly-forecast__data-item";
+    item.innerHTML = `
+      <p class="hourly-forecast__data-item__time">${formatTime(time)}</p>
+      <img class="hourly-forecast__data-item__icon" src="${
+        condition.icon
+      }" alt="${condition.text}" />
+      <p class="hourly-forecast__data-item__temp">${formatTemp(
+        temp_c,
+        temp_f,
+        unit
+      )}
+      </p>`;
+
+    fragment.appendChild(item);
   });
 
-  hourlyForecastContainer.innerHTML = hourlyForecastHTML;
+  hourlyForecastContainer.innerHTML = "";
+  hourlyForecastContainer.appendChild(fragment);
 }

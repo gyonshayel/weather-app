@@ -49,8 +49,8 @@ searchBtn.addEventListener("click", handleSearch);
 unit.addEventListener("change", handleUnitChange);
 
 // Get the last searched city from local storage
-const savedCity = localStorage.getItem("lastCity");
-if (savedCity) {
-  searchInput.value = savedCity;
-  getWeatherInfo(url, apiKey, savedCity, unit.value);
-}
+// const savedCity = localStorage.getItem("lastCity");
+// if (savedCity) {
+//   searchInput.value = savedCity;
+//   getWeatherInfo(url, apiKey, savedCity, unit.value);
+// }
