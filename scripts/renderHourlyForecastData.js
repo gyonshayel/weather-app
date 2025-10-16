@@ -11,14 +11,14 @@ export function renderHourlyForecastData(arrDays, unit) {
   const currentDate = new Date();
   const currentHour = currentDate.getHours();
 
-  // today's hours and tomorrow's hours data
+  // Today's hours and tomorrow's hours data
   const todayHours = arrDays[0].hour;
   const tomorrowHours = arrDays[1]?.hour || [];
 
-  // combining both
+  // Combining both
   const allHours = [...todayHours, ...tomorrowHours];
 
-  // getting only the next 24 hours from NOW
+  // Getting only the next 24 hours from NOW
   const cutOff = new Date(currentDate.getTime() + 1000 * 60 * 60 * 24);
   const next24Hours = allHours.filter((h) => {
     const hour = new Date(h.time);

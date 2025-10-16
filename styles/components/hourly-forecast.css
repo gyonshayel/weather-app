@@ -3,6 +3,7 @@
   border: 1px solid var(--color-border);
   border-top-color: var(--color-border-highlight);
   border-radius: 15px;
+  box-shadow: var(--shadow);
 }
 
 .hourly-forecast__title {
@@ -21,9 +22,6 @@
   column-gap: 1.5rem;
   overflow-x: auto;
   padding: 0.5em 0.25em;
-  /* background-color: var(--color-top);
-  border: 1px solid var(--color-border);
-  border-radius: 15px; */
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
 }

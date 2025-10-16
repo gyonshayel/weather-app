@@ -3,6 +3,7 @@
   border: 1px solid var(--color-border);
   border-top-color: var(--color-border-highlight);
   border-radius: 15px;
+  box-shadow: var(--shadow);
 }
 
 .future-forecast__title {
@@ -16,8 +17,6 @@
 .future-forecast__data {
   padding: 0.5em 0.5em;
   font-family: var(--font-family-text);
-  /* background-color: var(--color-top);
-  border-radius: 15px; */
 }
 
 .future-forecast__data hr {

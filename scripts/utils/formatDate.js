@@ -11,6 +11,6 @@ export function formatDate(date) {
     return "Today";
   }
 
-  // Otherwise, return weekday name, e.g., "Tuesday"
+  // Else return weekday name
   return forecastDate.toLocaleDateString(undefined, { weekday: "long" });
 }
