@@ -27,6 +27,6 @@ function renderWeather(weatherData, unit) {
   renderHourlyForecastData(forecast.forecastday, unit);
   renderFutureForecastData(forecast.forecastday, unit);
 
-  uvIndex(current.uv);
+  uvIndex(Math.round(current.uv));
   feelsLike(current, unit);
 }

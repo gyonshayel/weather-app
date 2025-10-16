@@ -1,6 +1,7 @@
 import { renderComponent } from "./renderComponent";
 
 export function uvIndex(uv) {
+  console.log(uv);
   renderComponent("uv-index", "UV-Index", uv);
 
   const uvComponent = document.querySelector(".uv-index");
