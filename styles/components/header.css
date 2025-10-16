@@ -16,7 +16,7 @@
   min-width: 10em;
   margin: auto;
   font-size: var(--size-base);
-  color: var(--color-heading);
+  color: var(--color-text);
   background-color: transparent;
   text-decoration: none;
   border: none;
@@ -25,7 +25,7 @@
 }
 
 .header-content__input::placeholder {
-  color: var(--color-text);
+  color: var(--color-text-muted);
 }
 
 .header-content__input:focus,
@@ -38,7 +38,7 @@
   margin: auto;
   outline: none;
   background-color: transparent;
-  color: var(--color-heading);
+  color: var(--color-text);
   border-radius: 9999px;
 }
 #unit option {

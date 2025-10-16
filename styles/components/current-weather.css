@@ -5,7 +5,7 @@
 .current-weather-data__city {
   font-size: var(--size-3xl);
   font-family: var(--font-family-heading);
-  color: var(--color-heading);
+  color: var(--color-text);
   line-height: 0.9;
 }
 
@@ -15,20 +15,20 @@
   align-items: center;
   font-size: var(--size-8xl);
   font-family: var(--font-family-heading);
-  color: var(--color-heading);
+  color: var(--color-text);
   letter-spacing: -0.05em;
 }
 
 .current-weather-data__summary {
   font-size: var(--size-xl);
   font-family: var(--font-family-heading);
-  color: var(--color-text);
+  color: var(--color-text-muted);
 }
 
 .current-weather-data__highest-lowest-temp {
   font-size: var(--size-xl);
   font-family: var(--font-family-heading);
-  color: var(--color-text);
+  color: var(--color-text-muted);
   line-height: 0.95;
 }
 

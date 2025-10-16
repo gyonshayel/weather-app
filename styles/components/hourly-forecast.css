@@ -1,19 +1,29 @@
 .hourly-forecast {
-  background-color: var(--color-top);
+  background: var(--gradient-hover);
+  border: 1px solid var(--color-border);
+  border-top-color: var(--color-border-highlight);
   border-radius: 15px;
 }
 
 .hourly-forecast__title {
   display: none;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   font-family: var(--font-family-heading);
-  color: var(--color-heading);
+  color: var(--color-text);
+}
+
+.scroll-btn {
+  display: none;
 }
 
 .hourly-forecast__data {
   display: flex;
   column-gap: 1rem;
   overflow-x: auto;
+  padding: 0.5em 0.25em;
+  /* background-color: var(--color-top);
+  border: 1px solid var(--color-border);
+  border-radius: 15px; */
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
 }
@@ -27,7 +37,7 @@
   min-width: 50px;
   font-family: var(--font-family-text);
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-text-muted);
   text-align: center;
 }
 
@@ -43,6 +53,14 @@
 
 /* sm */
 @media (min-width: 640px) {
+  .hourly-forecast {
+    background: var(--gradient);
+  }
+
+  .hourly-forecast:hover {
+    background: var(--gradient-hover);
+  }
+
   .hourly-forecast__data-wrapper {
     position: relative;
     display: flex;
@@ -50,6 +68,7 @@
   }
 
   .scroll-btn {
+    display: block;
     position: absolute;
     overflow: hidden;
     border-radius: 50%;

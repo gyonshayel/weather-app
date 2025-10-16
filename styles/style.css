@@ -6,10 +6,19 @@
   --color-bottom: hsl(0, 0%, 90%);
   --color-middle: hsl(0, 0%, 95%);
   --color-top: hsl(0, 0%, 100%);
+  --color-border: hsl(0, 0%, 30%);
+  --color-border-highlight: hsl(0, 0%, 60%);
+
+  --gradient: linear-gradient(0deg, var(--color-middle) 95%, var(--color-top));
+  --gradient-hover: linear-gradient(
+    0deg,
+    var(--color-middle),
+    var(--color-top)
+  );
 
   /* font colors */
-  --color-heading: hsl(0, 0%, 5%);
-  --color-text: hsl(0, 0%, 30%);
+  --color-text: hsl(0, 0%, 5%);
+  --color-text-muted: hsl(0, 0%, 30%);
 
   /* link colors */
   --color-link: rgb(0, 102, 204);
@@ -44,15 +53,15 @@
 body {
   display: block;
   min-height: 100vh;
-  background-color: var(--color-middle);
+  background-color: var(--color-bottom);
 }
 
 #weather-app {
-  background-color: var(--color-middle);
+  background-color: var(--color-bottom);
 }
 
 svg {
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
 img,
@@ -89,7 +98,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-bottom);
+    background: linear-gradient(to bottom, #e4e4e4, #2b396d, #0b0b0b);
   }
 
   #weather-app {
@@ -118,8 +127,8 @@ button {
     --color-general: hsl(0, 0%, 100%);
 
     /* font colors */
-    --color-heading: hsl(0, 0%, 95%);
-    --color-text: hsl(0, 0%, 70%);
+    --color-text: hsl(0, 0%, 95%);
+    --color-text-muted: hsl(0, 0%, 70%);
 
     /* link colors */
     --color-link: rgb(41, 151, 255);
