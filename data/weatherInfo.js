@@ -19,6 +19,7 @@ export async function getWeatherInfo(url, apiKey, query, unit) {
 
     const weatherData = await response.json();
     renderWeather(weatherData, unit);
+    localStorage.setItem("lastCity", weatherData.location.name); // Save last searched location to the local storage
     return weatherData;
   } catch (error) {
     alert(`Error fetching weather data: ${error.message}`);
@@ -40,6 +41,10 @@ function renderWeather(weatherData, unit) {
   renderHourlyForecastData(forecast.forecastday, unit);
   renderFutureForecastData(forecast.forecastday, unit);
 
+  const componentContainer = document.querySelector(
+    ".weather-data__components"
+  );
+  componentContainer.innerHTML = ""; // Clear previous components
   uvIndex(Math.round(current.uv));
   feelsLike(current, unit);
 }
