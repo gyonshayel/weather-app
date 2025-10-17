@@ -21,7 +21,7 @@
   display: flex;
   column-gap: 1.5rem;
   overflow-x: auto;
-  padding: 0.5em 0.25em;
+  padding: 0.5em 0.5em;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
 }
@@ -70,17 +70,24 @@
     position: absolute;
     overflow: hidden;
     border-radius: 50%;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
+    opacity: 0.25;
     cursor: pointer;
-    z-index: 10;
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+
+  .scroll-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
   }
 
   .scroll-btn.left {
-    left: -20px;
+    left: -10px;
   }
 
   .scroll-btn.right {
-    right: -20px;
+    right: -10px;
   }
 
   .scroll-btn svg {
