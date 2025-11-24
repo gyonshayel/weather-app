@@ -25,7 +25,7 @@
 - **Languages:** JavaScript / HTML
 - **Styling:** CSS
 - **Build Tool:** Vite
-- **API / Data:** WeatherAPI
+- **API / Data:** [WeatherAPI](https://www.weatherapi.com/)
 
 ---
 
