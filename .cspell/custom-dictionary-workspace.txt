@@ -1,6 +1,7 @@
 # Custom Dictionary Words
 feelslike
 forecastday
+Geolocation
 maxtemp
 mintemp
 weatherapi
