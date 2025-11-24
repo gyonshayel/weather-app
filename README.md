@@ -32,6 +32,6 @@
 ## 📸 Screenshots
 
 ![Home Page](./public/screenshots/image-1.png)
-![Forecasts](./public/screenshots/image-5.png)
+![Forecasts](./public/screenshots/image-2.png)
 
 ---
